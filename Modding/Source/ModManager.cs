@@ -1,10 +1,9 @@
-﻿using System;
-using System.IO;
-
-namespace TestModding
+﻿namespace MaslasBros.Mod
 {
-    class ModManager
+    public class ModManager
     {
+        public ModManager() { }
+
         //Given Var Path
         //Evaluate Path
         //Active MOD?
