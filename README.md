@@ -42,3 +42,22 @@ flowchart TB
     Mods --> Mod2
     Mods --> etc. 
 ```
+
+
+In order for a mod package to be valid, only one package.json file should be included in the root of its folder with the following JSON format...
+
+{
+
+  "name": "my_package",
+  
+  "description": "",
+  
+  "author": "",
+  
+  "version": "1.0.0",
+  
+  "supported": "^1.0.2"
+  
+}
+
+We check if the version from the mod is the same as the version of the game and if the supported version is not exceed the acceptable version range. In case it doesnt apply the previous, the mod will not be valid.
