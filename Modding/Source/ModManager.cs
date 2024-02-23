@@ -68,13 +68,8 @@ namespace MaslasBros.Mod
             if (!Directory.Exists(monitoredFolder)) throw new Exception("The monitored path doesn't exist.");
             if (!Directory.Exists(modsFolderPath)) Directory.CreateDirectory(modsFolderPath);
 
-#if UNITY_EDITOR
-            this.monitoredFolder = Path.GetFullPath(monitoredFolder).Trim();
-            this.modsFolderPath = Path.GetFullPath(modsFolderPath).Trim();
-#else
             this.monitoredFolder = monitoredFolder;
             this.modsFolderPath = modsFolderPath;
-#endif
 
             versionCollection = verCollection;
             validationProcedure = valProcedure;
