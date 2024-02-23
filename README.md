@@ -6,24 +6,24 @@ A C# tool that will provide in your game the ability of having modding and to yo
 
 ## Folder Structure
 
-The var folder will act as a fallback. Ιn case there are no mods or they don't meet the conditions, the assets from the var folder will be displayed.
+The Monitored folder will act as a fallback. Ιn case there are no mods or they don't meet the conditions, the assets from the Monitored folder will be displayed.
 
 ```mermaid 
 flowchart TB
-    Var --> DB
-    Var --> GIS
-    Var --> Missions
-    Var --> Samples
-    Var --> Scenarios 
-    Var --> Scripts
-    Var --> package.json
+    MonitoredFolder --> DB
+    MonitoredFolder --> GIS
+    MonitoredFolder --> Missions
+    MonitoredFolder --> Samples
+    MonitoredFolder --> Scenarios 
+    MonitoredFolder --> Scripts
+    MonitoredFolder --> package.json
 ```
 
-The Mods folder is where the mods should be to work properly. Each mod folder should have the same structure as the var folder. If the mod passes the evaluation and is active, the asset from the mod folder will be displayed , on the contrary if there is no mod or none is active, then the asset from the var folder will be displayed.
+The Mods folder is where the mods should be to work properly. Each mod folder should have the same structure as the Monitored folder. If the mod passes the evaluation and is active, the asset from the mod folder will be displayed , on the contrary if there is no mod or none is active, then the asset from the Monitored folder will be displayed.
 
 ```mermaid 
 flowchart TB
-    GlobalData --> Mods --> Mod0 --> DB
+    Mods --> Mod0 --> DB
     Mod0 --> GIS
     Mod0 --> Missions
     Mod0 --> Samples
